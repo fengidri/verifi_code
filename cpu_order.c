@@ -32,7 +32,7 @@ void *fun2(void *x)
 		sem_wait(&sem2);
 		Y = 1;
 		asm volatile("" ::: "memory"); // Prevent compiler reordering
-		r1 = X;
+		r2 = X;
 		sem_post(&seme);
 	}
 	return NULL;
