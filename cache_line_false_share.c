@@ -32,7 +32,7 @@ void *fun1(void *x)
 		s = s + a[0];
 	}
 	gettimeofday(&end, NULL);
-	printf("1 %lldus\n", (end.tv_sec - start.tv_sec) * 1000 * 1000 + end.tv_usec - end.tv_usec);
+	printf("1 %lldus\n", (end.tv_sec - start.tv_sec) * 1000 * 1000 + end.tv_usec - start.tv_usec);
 	return NULL;
 }
 
@@ -45,7 +45,7 @@ void *fun2(void *x)
 		a[windex] = 100 + i;
 	}
 	gettimeofday(&end, NULL);
-	printf("2 %lldus\n", (end.tv_sec - start.tv_sec) * 1000 * 1000 + end.tv_usec - end.tv_usec);
+	printf("2 %lldus\n", (end.tv_sec - start.tv_sec) * 1000 * 1000 + end.tv_usec - start.tv_usec);
 	return NULL;
 }
 
